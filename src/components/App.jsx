@@ -2,7 +2,6 @@ import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import css from './ContainerForm.module.css';
-
 import { Loader } from './Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAppState } from 'redux/app/selectors';
@@ -31,8 +30,10 @@ const App = () => {
                 <h1>Phonebook</h1>
                 <ContactForm />
                 <h2>Contacts</h2>
-                <Filter />
-                <ContactList />
+                <div>
+                  <Filter />
+                  <ContactList />
+                </div>
               </>
             )}
           </div>

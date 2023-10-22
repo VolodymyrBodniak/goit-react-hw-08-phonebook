@@ -3,6 +3,10 @@ import css from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { createContactThunk } from 'redux/contact/thunks';
+// import Stack from '@mui/material/Stack';
+import { Button } from '@mui/material';
+// import Box from '@mui/material/Box';
+// import TextField from '@mui/material/TextField';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -64,9 +68,12 @@ const ContactForm = () => {
         required
         value={number}
       />
-      <button type="submit" className={css.btn}>
+      <Button variant="contained" type="submit">
         Add contact
-      </button>
+      </Button>
+      {/* <button type="submit" className={css.btn}>
+        Add contact
+      </button> */}
     </form>
   );
 };

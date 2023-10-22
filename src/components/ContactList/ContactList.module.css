@@ -12,11 +12,12 @@
 .contactItem {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid black;
   padding: 8px;
 }
 
-.btn {
+/* .btn {
   width: 60px;
   cursor: pointer;
-}
+} */

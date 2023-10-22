@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContactThunk } from 'redux/contact/thunks';
 import { filteredContacts } from 'redux/contact/selectors';
 import css from './ContactList.module.css';
+import { Button } from '@mui/material';
 
 const ContactList = () => {
   const filteredContactsData = useSelector(filteredContacts);
@@ -18,13 +19,20 @@ const ContactList = () => {
       {filteredContactsData.map(contact => (
         <li key={contact.id} className={css.contactItem}>
           {contact.name}: {contact.phone}
-          <button
+          <Button
+            variant="contained"
+            type="button"
+            onClick={() => handleDeleteContact(contact.id)}
+          >
+            Delete
+          </Button>
+          {/* <button
             type="button"
             className={css.btn}
             onClick={() => handleDeleteContact(contact.id)}
           >
             Delete
-          </button>
+          </button> */}
         </li>
       ))}
     </ul>

@@ -1,4 +1,13 @@
 .containerForm {
-  width: 300px;
+  width: 400px;
   margin: 10px auto;
 }
+
+/* .filterForm {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 16px;
+  background-color: #fff;
+} */
