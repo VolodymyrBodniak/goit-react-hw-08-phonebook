@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { authUserThunk } from 'redux/auth/thunks';

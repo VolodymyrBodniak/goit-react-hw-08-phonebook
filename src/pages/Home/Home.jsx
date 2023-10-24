@@ -7,14 +7,12 @@ const Home = () => {
         width: 500,
         margin: '0 auto',
         marginTop: '100px',
-        // backgroundColor: '#afc4ef',
-        // borderRadius: '15px',
         padding: '10px',
       }}
     >
       <Typography variant="h5" color="#000" textAlign="center">
-        Welcome to Phonebook App. There is you can create a new account(or login
-        if you have an account) and to save your contacts.
+        Welcome to Phonebook App. Here you can create a new account (or login if
+        you already have an account) and save your contacts.
       </Typography>
     </Box>
   );

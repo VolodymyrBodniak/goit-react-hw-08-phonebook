@@ -1,6 +1,4 @@
-import * as React from 'react';
 import {
-  Avatar,
   Button,
   CssBaseline,
   TextField,
@@ -47,7 +45,6 @@ export default function RegistrationForm() {
           padding: '20px',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: 'primary.light' }}></Avatar>
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>

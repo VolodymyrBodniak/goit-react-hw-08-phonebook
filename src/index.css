@@ -1,19 +1,5 @@
 /* @import-normalize; */
-
-::-webkit-scrollbar {
-  width: 18px;
-}
-
-::-webkit-scrollbar-track {
-  background: #dadad3e0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(5, 5, 5, 0.2);
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
+/*  */
 
 body {
   margin: 0;
