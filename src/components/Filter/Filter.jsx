@@ -1,25 +1,53 @@
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { setFilter } from 'redux/filter/filterSlice';
+// import { TextField } from '@mui/material';
+// // import css from './Filter.module.css';
+
+// const Filter = () => {
+//   const { filter } = useSelector(state => state.filter);
+//   const dispatch = useDispatch();
+
+//   const handleFilterChange = event => {
+//     dispatch(setFilter(event.target.value));
+//   };
+
+//   return (
+//     <div className={css.filterForm}>
+//       <TextField
+//         label="Find contacts by name"
+//         variant="outlined"
+//         value={filter}
+//         onChange={handleFilterChange}
+//         placeholder="Search..."
+//         fullWidth
+//       />
+//     </div>
+//   );
+// };
+
+// export default Filter;
+
 import { setFilter } from 'redux/filter/filterSlice';
-import css from './Filter.module.css';
+import { useDispatch } from 'react-redux';
+import { Box, TextField } from '@mui/material';
 
 const Filter = () => {
-  const { filter } = useSelector(state => state.filter);
   const dispatch = useDispatch();
-
-  const handleFilterChange = event => {
-    dispatch(setFilter(event.target.value));
+  const getFilterData = ({ target: { value } }) => {
+    dispatch(setFilter(value));
   };
-
   return (
-    <div className={css.filterForm}>
-      <label>Find contacts by name</label>
-      <input
+    <Box noValidate sx={{ mt: 1 }}>
+      <TextField
+        fullWidth
         type="text"
-        value={filter}
-        onChange={handleFilterChange}
-        placeholder="Search..."
+        name="filter"
+        onChange={getFilterData}
+        label="Find contacts by Name"
+        id="outlined-basic"
+        variant="outlined"
       />
-    </div>
+    </Box>
   );
 };
 
